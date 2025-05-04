@@ -180,3 +180,9 @@ treemap.c:168:16: error: 'ub_node' undeclared (first use in this function)
                 ^~~~~~~
 treemap.c:168:16: note: each undeclared identifier is reported only once for each function it appears in
 8b1941a
+Sat, May  3, 2025 11:47:09 PM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  29|0
+total_score: 70/70
+bd65b86
