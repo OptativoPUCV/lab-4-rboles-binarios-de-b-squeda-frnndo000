@@ -14,3 +14,20 @@ Sat, May  3, 2025 10:52:02 PM:
  tests:  4|7
 total_score: 5/70
 a9901d1
+Sat, May  3, 2025 11:04:26 PM: 
+ treemap.c | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:55:21: error: too many arguments to function 'createTreeMap'
+     TreeNode* new = createTreeMap(key, value) ;
+                     ^~~~~~~~~~~~~
+treemap.c:39:11: note: declared here
+ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
+           ^~~~~~~~~~~~~
+treemap.c:55:21: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     TreeNode* new = createTreeMap(key, value) ;
+                     ^~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+cd86e5a
