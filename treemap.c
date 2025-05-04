@@ -117,17 +117,31 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
 void eraseTreeMap(TreeMap * tree, void* key){
     if (tree == NULL || tree->root == NULL) return;
-
     if (searchTreeMap(tree, key) == NULL) return;
+
     TreeNode* node = tree->current;
     removeNode(tree, node);
-
 }
 
 
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
+    TreeNode * current = tree->root ;
+
+    while (current != NULL) {
+        if (is_equal(tree, key, current->pair->key)) {
+            tree->current = current ;
+            return current->pair ;
+        }
+
+        if (tree->lower_than(key, current->pair->key)) {
+            current = current->right ;
+        } else {
+            current = current->left ;
+        }
+    }
+
     return NULL;
 }
 
