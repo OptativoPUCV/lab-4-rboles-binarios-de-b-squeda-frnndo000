@@ -142,7 +142,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         }
     }
 
-    return ;
+    return NULL;
 }
 
 
